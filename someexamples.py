@@ -331,7 +331,7 @@ print f.__name__
 '''
 
 
-
+'''
 
 def log(func):
     def wrapper(*args, **kw):
@@ -339,23 +339,39 @@ def log(func):
         return func(*args, **kw)
     return wrapper
 
-
 @log
 def now():
     print '2013-12-25'
 
-# f = now
-# print f()
-# print now.__name__
-# print f.__name__
-now()
+# # f = now
+# # f()
+# # print f()
+# # print now.__name__
+# # print f.__name__
+# now()
+
+a = log(now)
+a()
+'''
 
 
+'''
+' a test module '
+__author__ = 'MDing'
+import sys
+def test():
+    args = sys.argv
+    if len(args) == 1:
+        print "Hello World!"
+    elif len(args) == 2:
+        print "Hello, %s!" % args[1]
+    else:
+        print 'Too many arguments!'
+    print 'this is %s' % args[0]
 
-
-
-
-
+if __name__ == '__main__':
+    test()
+'''
 
 
 
