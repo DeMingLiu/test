@@ -372,12 +372,18 @@ def test():
 if __name__ == '__main__':
     test()
 '''
+#   deal with failure
 
 
 
-
-
-
+try :
+    print 'try ....'
+    r = 10 / 0
+except ZeroDivisionError, e:
+    print 'except: ', e
+finally:
+    print 'finally ...'
+print 'END'
 
 
 
